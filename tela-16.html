@@ -17,15 +17,37 @@
     </div>
     <div
         style="margin-top: 37px;display: flex;flex-direction: column;justify-content: space-between;align-items: center;height: 120px;">
-        <div style="width: 491px;height: 43px;background: #649781 0% 0% no-repeat padding-box;">
+        <div id="botao_1"
+            style="width: 491px; height: 43px; background: 0% 0% no-repeat padding-box padding-box rgb(100, 151, 129); cursor: pointer;">
             <p
                 style="text-align: center;font: normal normal bold 14px/18px Poppins;letter-spacing: 0px;color: #FFFFFF;">
                 Política Nacional da Atenção Básica (PNAB) de 2006.</p>
         </div>
-        <div style="width: 491px;height: 61px;background: #649781 0% 0% no-repeat padding-box;">
+        <div id="botao_2"
+            style="width: 491px; height: 61px; background: 0% 0% no-repeat padding-box padding-box rgb(100, 151, 129); cursor: pointer;">
             <p
                 style="text-align: center;font: normal normal bold 14px/18px Poppins;letter-spacing: 0px;color: #FFFFFF;">
                 Criação dos Núcleos Ampliados de Saúde<br> da Família (NASF), em 2008.</p>
+        </div>
+    </div>
+    <div>
+        <div id="janela_1" class="jan">
+            <div
+                style="width: 625px;height: 202px;background: #376551 0% 0% no-repeat padding-box;margin-top: 230px;margin-left: 130px;display: flex;align-items: center;justify-content: center;">
+                <p style="text-align: center;font: normal normal bold 14px/18px Poppins;color: #FFAA00;width: 453px;">
+                    Reafirmada na
+                    segunda edição de 2011, explicitando a eleição da Saúde da Família como estratégia
+                    prioritária para
+                    expansão e consolidação da APS no Brasil.</p>
+            </div>
+        </div>
+        <div id="janela_2" class="jan">
+            <div
+                style="width: 625px;height: 202px;background: #376551 0% 0% no-repeat padding-box;margin-top: 230px;margin-left: 130px;display: flex;align-items: center;justify-content: center;">
+                <p style="text-align: center;font: normal normal bold 14px/18px Poppins;color: #FFAA00;width: 453px;">
+                    Para apoiar a inserção da Estratégia de Saúde da Família (ESF) na rede de serviços e ampliar a
+                    resolutividade da APS.</p>
+            </div>
         </div>
     </div>
 </div>
@@ -39,3 +61,28 @@
             NA MODELAGEM DE REDES DE ATENÇÃO À SAÚDE</p>
     </div>
 </footer>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        $(document).find('[id^=btn]').hide();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).css('cursor', 'pointer');
+            $(botao).hover(() => {
+                $(document).find(`[id=botao_${index + 1}]`).css('background-color', '#FFA800');
+            });
+            $(botao).mouseleave(() => {
+                $(document).find(`[id=botao_${index + 1}]`).css('background-color', '#649781');
+            });
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

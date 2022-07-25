@@ -22,17 +22,63 @@
         <p>Clique sobre os nomes em destaque para conhecer aspectos referentes a eles.</p>
         <div
             style="margin-top: 41px;margin-left: 90px;display: flex;flex-direction: column;justify-content: space-between;height: 100px;">
-            <div
-                style="width: 491px;height: 43px;background: #649781 0% 0% no-repeat padding-box;display: flex;justify-content: center;align-items: center;">
+            <div id="botao_1"
+                style="width: 491px; height: 43px; background: 0% 0% no-repeat padding-box padding-box rgb(100, 151, 129); display: flex; justify-content: center; align-items: center; cursor: pointer;">
                 <p
                     style="text-align: center;font: normal normal bold 14px/18px Poppins;color: #FFFFFF;display: flex;justify-content: center;align-items: center;">
                     VIGILÂNCIA DA
                     SAÚDE</p>
             </div>
-            <div
-                style="width: 491px;height: 43px;background: #649781 0% 0% no-repeat padding-box;display: flex;justify-content: center;align-items: center;">
+            <div id="botao_2"
+                style="width: 491px; height: 43px; background: 0% 0% no-repeat padding-box padding-box rgb(100, 151, 129); display: flex; justify-content: center; align-items: center; cursor: pointer;">
                 <p style="text-align: center;font: normal normal bold 14px/18px Poppins;color: #FFFFFF;">CLÍNICA
                     AMPLIÁDA</p>
+            </div>
+        </div>
+        <div>
+            <div id="janela_1" class="jan">
+                <div
+                    style="width: 687px;height: 375px;background: #376551 0% 0% no-repeat padding-box;margin-top: 72px;margin-left: 100px;display: flex;align-items: center;justify-content: space-around;flex-direction: column;">
+                    <p
+                        style="text-align: center;font: normal normal bold 32px/26px Poppins;letter-spacing: 0px;color: #FFAB00;">
+                        VIGILÂNCIA DA SAÚDE</p>
+                    <p
+                        style="width: 496px;height: 132px;text-align: left;font: normal normal normal 14px/18px Poppins;color: #FFAB00;">
+                        A Vigilância da Saúde aponta para pressupostos da determinação social do processo
+                        saúde-doença e
+                        da promoção da saúde,
+                        visando à incorporação de tecnologias e práticas voltadas para controlar determinantes,
+                        riscos e
+                        agravos à saúde,
+                        articulando enfoque populacional (promoção) com enfoque de risco (prevenção) e enfoque
+                        clínico
+                        (assistência) de acordo
+                        com a situação de saúde específica do território (TEIXEIRA; VILASBÔAS, 2014).</p>
+                </div>
+            </div>
+            <div id="janela_2" class="jan">
+                <div
+                    style="width: 687px;height: 375px;background: #376551 0% 0% no-repeat padding-box;margin-top: 72px;margin-left: 100px;display: flex;align-items: center;justify-content: flex-start;flex-direction: column;">
+                    <p
+                        style="text-align: center;font: normal normal bold 32px/26px Poppins;letter-spacing: 0px;color: #FFAB00;">
+                        CLÍNICA AMPLIADA</p>
+                    <p
+                        style="width: 496px;height: 132px;text-align: left;font: normal normal normal 14px/18px Poppins;color: #FFAB00;">
+                        A clínica ampliada sinaliza para uma prática voltada para a construção de trocas solidárias
+                        e
+                        comprometidas com a dupla
+                        tarefa de produção da saúde e produção de sujeitos, enfatizando a relação entre usuários e
+                        trabalhadores, a importância
+                        do aumento de sua autonomia e seu protagonismo para a mudança do sentido do trabalho e da
+                        produção da saúde, com
+                        incorporação e fortalecimento de práticas de acolhimento, vínculo e estratégias
+                        organizativas
+                        tecnoassistenciais, tais
+                        como apoio matricial, equipe de referência e projeto terapêutico singular (FRANCO; BUENO;
+                        MERHY,
+                        1999; BRASIL, 2004;
+                        FRANCO; MERHY, 2005; CAMPOS; DOMITTI, 2007; JORGE et al., 2015).</p>
+                </div>
             </div>
         </div>
     </div>
@@ -47,3 +93,28 @@
             NA MODELAGEM DE REDES DE ATENÇÃO À SAÚDE</p>
     </div>
 </footer>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        $(document).find('[id^=btn]').hide();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).css('cursor', 'pointer');
+            $(botao).hover(() => {
+                $(document).find(`[id=botao_${index + 1}]`).css('background-color', '#FFA800');
+            });
+            $(botao).mouseleave(() => {
+                $(document).find(`[id=botao_${index + 1}]`).css('background-color', '#649781');
+            });
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>
