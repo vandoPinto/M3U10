@@ -1,3 +1,11 @@
+<style>
+    .zoom:hover {
+        transition: transform .2s;
+        transform: scale(1.5);
+        margin-left: 110px;
+        /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+</style>
 <div style="height: 60px;width: 100%;">
     <img style="height: 60px;position: absolute;right: 0px;" src="recursos/imgs/H1.png">
     <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">TÓPICO<strong>
@@ -133,11 +141,11 @@
         let botoes = $(document).find('[id^=botao]').map((index, botao) => {
             $(botao).css('cursor', 'pointer');
             $(botao).hover(() => {
-                $(document).find(`[id=text_${index + 1}]`).css('color', '#FFA800');
+                $(document).find(`[id=botao_${index + 1}]`).addClass('zoom');
+                $(document).find(`[id=botao_${index + 1}]`).css('zoom');
             });
             $(botao).mouseleave(() => {
-                $(document).find(`[id=text_1]`).css('color', '#006FFF');
-                $(document).find(`[id=text_2]`).css('color', '#CE00FF');
+                $(document).find(`[id=botao_${index + 1}]`).removeClass('zoom');
             });
             $(botao).click(() => {
                 apagarJanelas();
