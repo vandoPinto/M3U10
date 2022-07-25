@@ -15,25 +15,80 @@
         </p>
         <p style="text-align: center;">Clique nas imagens para conhecê-las.</p>
         <div style="display: flex;margin-top: 29px;align-items: flex-end;justify-content: space-between;">
-            <div>
+            <div id="botao_1" style="cursor: pointer;">
                 <img src="recursos/imgs/Group_2674.svg" style="width: 119px;">
                 <p style="text-align: center;font: normal normal bold 14px/18px Poppins;color: #376551;">GEOGRÁFICAS
                 </p>
             </div>
-            <div>
+            <div id="botao_2" style="cursor: pointer;">
                 <img src="recursos/imgs/Group_2676.svg" style="width: 119px;">
                 <p style="text-align: center;font: normal normal bold 14px/18px Poppins;color: #376551;">FINANCEIRAS
                 </p>
             </div>
-            <div>
+            <div id="botao_3" style="cursor: pointer;">
                 <img src="recursos/imgs/Group_2675.svg" style="width: 119px;">
                 <p style="text-align: center;font: normal normal bold 14px/18px Poppins;color: #376551;">
                     ORGANIZACIONAIS</p>
             </div>
-            <div>
+            <div id="botao_4" style="cursor: pointer;">
                 <img src="recursos/imgs/Group_2677.svg" style="width: 110px;">
                 <p style="text-align: center;font: normal normal bold 14px/18px Poppins;color: #376551;">
                     INFORMACIONAIS</p>
+            </div>
+        </div>
+        <div>
+            <div id="janela_1" class="jan">
+                <div
+                    style="width: 814px;height: 140px;background: #0066B9F2 0% 0% no-repeat padding-box;display: flex;align-items: center;justify-content: center;flex-direction: column;margin-top: 70px;margin-left: 40px;">
+                    <p
+                        style="text-align: center;font: normal normal bold 16px/18px Poppins;letter-spacing: 0px;color: #FFFFFF;">
+                        GEOGRÁFICAS</p>
+                    <p
+                        style="width: 723px;text-align: left;font: normal normal normal 14px/18px Poppins;color: #FFFFFF;">
+                        Resistência que o espaço impõe ao deslocamento dos potenciais usuários e à utilização dos
+                        serviços, influenciada pela
+                        distância e pelos custos de deslocamento (tempo e recursos financeiros).</p>
+                </div>
+            </div>
+            <div id="janela_2" class="jan">
+                <div
+                    style="width: 814px;height: 140px;background: #0066B9F2 0% 0% no-repeat padding-box;display: flex;align-items: center;justify-content: center;flex-direction: column;margin-top: 70px;margin-left: 40px;">
+                    <p
+                        style="text-align: center;font: normal normal bold 16px/18px Poppins;letter-spacing: 0px;color: #FFFFFF;">
+                        FINANCEIRAS</p>
+                    <p
+                        style="width: 723px;text-align: left;font: normal normal normal 14px/18px Poppins;color: #FFFFFF;">
+                        Existência de relação negativa entre elevação nos preços dos serviços e a sua utilização,
+                        aumentando as desigualdades
+                        sociais no acesso aos serviços.</p>
+                </div>
+            </div>
+            <div id="janela_3" class="jan">
+                <div
+                    style="width: 814px;height: 140px;background: #0066B9F2 0% 0% no-repeat padding-box;display: flex;align-items: center;justify-content: center;flex-direction: column;margin-top: 70px;margin-left: 40px;">
+                    <p
+                        style="text-align: center;font: normal normal bold 16px/18px Poppins;letter-spacing: 0px;color: #FFFFFF;">
+                        ORGANIZACIONAIS</p>
+                    <p
+                        style="width: 723px;text-align: left;font: normal normal normal 14px/18px Poppins;color: #FFFFFF;">
+                        Organização dos serviços, tipo e qualidade de recursos humanos e tecnológicos que facilitam ou
+                        limitam sua utilização,
+                        tais como horário de funcionamento, tempo de espera, acolhimento, qualidade técnica, tipo de
+                        profissional disponível.</p>
+                </div>
+            </div>
+            <div id="janela_4" class="jan">
+                <div
+                    style="width: 814px;height: 140px;background: #0066B9F2 0% 0% no-repeat padding-box;display: flex;align-items: center;justify-content: center;flex-direction: column;margin-top: 70px;margin-left: 40px;">
+                    <p
+                        style="text-align: center;font: normal normal bold 16px/18px Poppins;letter-spacing: 0px;color: #FFFFFF;">
+                        INFORMACIONAIS</p>
+                    <p
+                        style="width: 723px;text-align: left;font: normal normal normal 14px/18px Poppins;color: #FFFFFF;">
+                        Impacta tanto na percepção de saúde quanto no seu acesso aos serviços e resulta de ações
+                        desenvolvidas no setor saúde
+                        mais o capital cultural das famílias, escolaridade e acesso aos meios de informação.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -48,3 +103,28 @@
             NA MODELAGEM DE REDES DE ATENÇÃO À SAÚDE</p>
     </div>
 </footer>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        $(document).find('[id^=btn]').hide();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).css('cursor', 'pointer');
+            $(botao).hover(() => {
+                //$(document).find(`[id=botao_${index + 1}]`).css('background-color', '#FFA800');
+            });
+            $(botao).mouseleave(() => {
+                //$(document).find(`[id=botao_${index + 1}]`).css('background-color', '#649781');
+            });
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

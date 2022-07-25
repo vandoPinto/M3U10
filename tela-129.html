@@ -22,7 +22,31 @@
             <p style="margin-top: 29px;margin-left: 54px;width: 319px;">Clique na imagem para conhecer mais sobre
                 esse
                 estudo.</p>
-            <img src="recursos/imgs/Group_2772.svg" style="width: 319px;margin-left: 54px;margin-top: 20px;">
+            <img id="botao_1" src="recursos/imgs/Group_2772.svg"
+                style="width: 319px; margin-left: 54px; margin-top: 20px; cursor: pointer;">
+        </div>
+        <div>
+            <div id="janela_1" class="jan" style="cursor: pointer; display: none;">
+                <div
+                    style="top: 0px;left: 0px;width: 890px;height: 501px;background: #376551 0% 0% no-repeat padding-box;border: 1px solid #707070;opacity: 1;position: absolute;display: flex;justify-content: center;align-items: center;">
+                    <img src="recursos/imgs/Group_2772.svg"
+                        style="position: absolute;top: 0px;left: 27px;width: 667px;font: normal normal normal 18px/28px Poppins;opacity: 0.08;">
+                    <p
+                        style="width: 682px;text-align: left;color: #FFFFFF;font: normal normal normal 18px/28px Poppins;">
+                        Nesse estudo, a programação pactuada e
+                        integrada (PPI) foi insuficiente para reduzir a fragmentação, pois não havia
+                        garantias de que as cotas programadas de procedimentos fossem distribuídas entre as unidades
+                        de
+                        saúde municipais. A
+                        compra de serviços especializados da rede privada para superar a insuficiência da oferta
+                        municipal demonstrou ser uma
+                        estratégia nem sempre bem-sucedida devido à inexistência de determinadas especialidades e
+                        baixa
+                        remuneração pela tabela
+                        SUS (GIOVANELLA et al., 2009).</p>
+
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -36,3 +60,28 @@
             NA MODELAGEM DE REDES DE ATENÇÃO À SAÚDE</p>
     </div>
 </footer>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        $(document).find('[id^=btn]').hide();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).css('cursor', 'pointer');
+            $(botao).hover(() => {
+                //$(document).find(`[id=botao_${index + 1}]`).css('background-color', '#FFA800');
+            });
+            $(botao).mouseleave(() => {
+                //$(document).find(`[id=botao_${index + 1}]`).css('background-color', '#649781');
+            });
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>
