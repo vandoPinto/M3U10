@@ -1,9 +1,8 @@
 <style>
     .zoom:hover {
         transition: transform .2s;
-        transform: scale(1.5);
-        margin-left: 110px;
-        /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        transform: scale(1.2);
+        margin-left: 100px;
     }
 </style>
 <div style="height: 60px;width: 100%;">
@@ -23,38 +22,38 @@
             </div>
             <div
                 style="margin-top: 39px;margin-left: -73px;display: flex;flex-direction: column;justify-content: space-between;height: 261px;">
-                <div id="botao_1">
+                <div id="botao_1" style="width: 300px;height: 55px;margin-left: -50px;" class="">
                     <p
-                        style="text-align: center;font: normal normal bold 12px/18px Poppins;color: #3B265D;position: absolute;margin-left: 40px;">
+                        style="text-align: center;font: normal normal bold 12px/18px Poppins;color: #3B265D;position: absolute;margin-left: 90px;">
                         Pontos de
                         atenção</p>
-                    <img src="recursos/imgs/Group_2454.svg">
+                    <img src="recursos/imgs/Group_2454.svg" style="margin-left: 50px;">
                 </div>
-                <div id="botao_2">
+                <div id="botao_2" style="width: 300px;height: 55px;margin-left: -50px;" class="">
                     <p
-                        style="text-align: center;font: normal normal bold 12px/18px Poppins;color: #3B265D;position: absolute;margin-left: 40px;">
+                        style="text-align: center;font: normal normal bold 12px/18px Poppins;color: #3B265D;position: absolute;margin-left: 90px;">
                         Sistemas de
                         apoio</p>
-                    <img src="recursos/imgs/Group_2454.svg">
+                    <img src="recursos/imgs/Group_2454.svg" style="margin-left: 50px;">
                 </div>
-                <div id="botao_3">
+                <div id="botao_3" style="width: 300px;height: 55px;margin-left: -50px;" class="">
                     <p
-                        style="text-align: center;font: normal normal bold 12px/18px Poppins;color: #3B265D;position: absolute;margin-left: 40px;">
+                        style="text-align: center;font: normal normal bold 12px/18px Poppins;color: #3B265D;position: absolute;margin-left: 90px;">
                         Sistemas de
                         governança</p>
-                    <img src="recursos/imgs/Group_2454.svg">
+                    <img src="recursos/imgs/Group_2454.svg" style="margin-left: 50px;">
                 </div>
-                <div id="botao_4">
+                <div id="botao_4" style="width: 300px;height: 55px;margin-left: -50px;" class="">
                     <p
-                        style="text-align: center;font: normal normal bold 12px/18px Poppins;color: #3B265D;position: absolute;margin-left: 40px;">
+                        style="text-align: center;font: normal normal bold 12px/18px Poppins;color: #3B265D;position: absolute;margin-left: 90px;">
                         Modelo de
                         atenção</p>
-                    <img src="recursos/imgs/Group_2454.svg">
+                    <img src="recursos/imgs/Group_2454.svg" style="margin-left: 50px;">
                 </div>
             </div>
         </div>
         <div>
-            <div id="janela_1" style="position: absolute; top: 200px; left: 300px; ">
+            <div id="janela_1" style="position: absolute; top: 200px; left: 300px; cursor: pointer; display: none;">
                 <p style="text-align: center;font: normal normal bold 16px/18px Poppins;color: #FFFFFF;">Pontos de
                     atenção</p>
                 <p style="font: normal normal normal 12px/18px Poppins;color: #FFFFFF;width: 526px;">Os pontos de
@@ -71,7 +70,7 @@
                     de
                     atenção à saúde.</p>
             </div>
-            <div id="janela_2" style="position: absolute; top: 187px; left: 300px; ">
+            <div id="janela_2" style="position: absolute; top: 187px; left: 300px; cursor: pointer; display: none;">
                 <p style="text-align: center;font: normal normal bold 16px/18px Poppins;color: #FFFFFF;">Sistemas de
                     apoio</p>
                 <p style="font: normal normal normal 12px/18px Poppins;color: #FFFFFF;width: 526px;">Os sistemas de
@@ -92,7 +91,7 @@
                     necessidade e acesso, fazendo ligações verticais ou horizontais na malha da rede (SILVA, 2008).
                 </p>
             </div>
-            <div id="janela_3" style="position: absolute; top: 200px; left: 300px; ">
+            <div id="janela_3" style="position: absolute; top: 200px; left: 300px; cursor: pointer; display: none;">
                 <p style="text-align: center;font: normal normal bold 16px/18px Poppins;color: #FFFFFF;">Sistemas de
                     governança</p>
                 <p style="font: normal normal normal 12px/18px Poppins;color: #FFFFFF;width: 526px;">Os sistemas de
@@ -104,7 +103,7 @@
                     aumentar a
                     interdependência entre eles e obter resultados sanitários e econômicos para a população.</p>
             </div>
-            <div id="janela_4" style="position: absolute; top: 200px; left: 300px; ">
+            <div id="janela_4" style="position: absolute; top: 200px; left: 300px; cursor: pointer; display: none;">
                 <p style="text-align: center;font: normal normal bold 16px/18px Poppins;color: #FFFFFF;">Modelo de
                     atenção</p>
                 <p style="font: normal normal normal 12px/18px Poppins;color: #FFFFFF;width: 526px;">O modelo de
@@ -142,7 +141,6 @@
             $(botao).css('cursor', 'pointer');
             $(botao).hover(() => {
                 $(document).find(`[id=botao_${index + 1}]`).addClass('zoom');
-                $(document).find(`[id=botao_${index + 1}]`).css('zoom');
             });
             $(botao).mouseleave(() => {
                 $(document).find(`[id=botao_${index + 1}]`).removeClass('zoom');
