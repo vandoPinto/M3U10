@@ -87,7 +87,7 @@
         let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
         apagarJanelas();
         $(document).find('[id^=btn]').hide();
-        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+        let botoes = $(document).find('[id^=botao]').addClass('zoom').map((index, botao) => {
             $(botao).css('cursor', 'pointer');
             $(botao).hover(() => {
                 $(document).find(`[id=botao_${index + 1}]`).css('background-color', '#FFA800');

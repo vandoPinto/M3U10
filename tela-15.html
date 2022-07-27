@@ -1,1 +1,73 @@
+<style>
+    .parent {
+        width: 898px;
+        overflow-x: hidden;
+        float: left;
+    }
 
+    .child {
+        width: 1000px;
+        height: 492px;
+        float: left;
+        cursor: pointer;
+    }
+</style>
+<div style="display: flex;">
+    <div
+        style="width: 792px;height: 490px;right: 1px;background-color: #FFB300;/* padding-left: 40px; */padding-top: 10px;">
+        <div style="
+    margin-left: 11px;
+">
+            <p style="color: white;margin-left: 30px;/* margin-top: 26px; */font-size: 12px;">
+                TÓPICO<strong>
+                    1</strong></p>
+            <p
+                style="color: white;margin-left: 100px;margin-top: -36px;width: 280px;font: normal normal normal 11px/17px Poppins;font-size: 10px;">
+                REDES DE ATENÇÃO À SAÚDE: CONCEPÇÕES, ASPECTOS HISTÓRICOS E ORGANIZATIVOS</p>
+            <div style="width: 358px;height: 2px;background: #FFFFFF 0% 0% no-repeat padding-box;margin-left: 20px;">
+            </div>
+        </div>
+        <p style="margin-top: 113px;width: 320px;margin-left: 50px;font: normal normal normal 14px/18px Poppins;">
+            Para melhor análise desses
+            aspectos, vamos percorrer uma breve linha do tempo? Neste percurso, não faremos uma longa caminhada,
+            apenas veremos a demarcação de alguns marcos normativos das políticas públicas de saúde no Brasil,
+            destacando aspectos que ressoaram e ressoam na organização de redes de atenção à saúde e da APS na
+            realidade brasileira.<i>et al.</i>, 2020). </p>
+
+        <div style="position: absolute;height: 300px;width: 3px;background-color: #265D3B;top: 98px;left: 415px;">
+        </div>
+    </div>
+    <div class="parent">
+        <div class="child">
+            <img src="recursos/imgs/SLIDE_15.svg" style="height: 460px;margin-top: 40px;">
+        </div>
+    </div>
+</div>
+<script>
+    $(() => {
+        const slider = document.querySelector('.parent');
+        let mouseDown = false;
+        let startX, scrollLeft;
+
+        let startDragging = function (e) {
+            mouseDown = true;
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        };
+        let stopDragging = function (event) {
+            mouseDown = false;
+        };
+
+        slider.addEventListener('mousemove', (e) => {
+            e.preventDefault();
+            if (!mouseDown) { return; }
+            const x = e.pageX - slider.offsetLeft;
+            const scroll = x - startX;
+            slider.scrollLeft = scrollLeft - scroll;
+        });
+
+        slider.addEventListener('mousedown', startDragging, false);
+        slider.addEventListener('mouseup', stopDragging, false);
+        slider.addEventListener('mouseleave', stopDragging, false);
+    })
+</script>
