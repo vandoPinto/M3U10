@@ -14,37 +14,14 @@
                 devem, por razões de
                 eficácia, economicidade e qualidade da atenção, dicotomizarem-se em subsistemas de cuidados crônicos
                 e cuidados agudos.</p>
-            <p>O enfrentamento desse antigo <b id="botao_1"
-                    style="font: bold 14px / 18px Poppins; letter-spacing: 0px; color: rgb(55, 101, 81);">dilema</b>
-                dos sistemas de saúde só pode ser feito com a construção de
+            <p>O enfrentamento desse antigo <strong style="width: 40px; background-color: #1F6D4C; display: inline;"><a
+                        id="hotWord-bt">dilema</a></strong> dos sistemas de saúde só pode ser feito com a construção
+                de
                 efetivas redes de
                 atenção à saúde (SILVA; MAGALHÃES JR., 2008).</p>
         </div>
         <div class="animate__animated animate__backInRight">
             <img src="recursos/imgs/Group_2432.svg" style="width: 362px;margin-left: 74px;margin-top: 24px;">
-        </div>
-        <div>
-            <div id="janela_1" class="jan">
-                <div
-                    style="width: 417px;height: 364px;background: #376551F2 0% 0% no-repeat padding-box;opacity: 1;margin-left: 450px;margin-top: 80px;display: flex;align-items: center;justify-content: center;flex-direction: column;">
-                    <p
-                        style="width: 361px;text-align: left;font: normal normal normal 14px/18px Poppins;color: #FFFFFF;">
-                        Por um lado, temos a necessidade de organização de redes regionalizadas de atenção à saúde, o
-                        que
-                        está no arcabouço
-                        jurídico-legal do SUS e é reforçado pelas diretrizes da política de saúde com ênfase na
-                        regionalização (BRASIL, 2006).</p>
-                    <p
-                        style="width: 361px;text-align: left;font: normal normal normal 14px/18px Poppins;color: #FFFFFF;">
-                        Por outro, ainda convivemos com problemas característicos de sistemas fragmentados de saúde,
-                        voltados para problemas
-                        agudos e alheios às condições crônicas, somados aos dilemas expressos diretamente na gestão
-                        do
-                        sistema de saúde e nos
-                        retrocessos impostos à APS e às políticas de saúde no Brasil nos últimos anos (GIOVANELLA;
-                        FRANCO; ALMEIDA, 2020).</p>
-                </div>
-            </div>
         </div>
     </div>
 </div>
@@ -58,28 +35,31 @@
             NA MODELAGEM DE REDES DE ATENÇÃO À SAÚDE</p>
     </div>
 </footer>
+<div id="conteudo"
+    style="position: absolute;background-color: #1F6D4C;top: 80px;left: 20px;width: 640px;border-radius: 10px;display: flex;flex-direction: column;align-items: center;justify-content: center;">
+    <p style="width: 580px;text-align: left;font: normal normal normal 14px/18px Poppins; color: white;">
+        Por um lado, temos a necessidade de organização de redes regionalizadas de atenção à saúde, o
+        que
+        está no arcabouço
+        jurídico-legal do SUS e é reforçado pelas diretrizes da política de saúde com ênfase na
+        regionalização (BRASIL, 2006).</p>
+    <p style="width: 580px;text-align: left;font: normal normal normal 14px/18px Poppins; color: white;">
+        Por outro, ainda convivemos com problemas característicos de sistemas fragmentados de saúde,
+        voltados para problemas
+        agudos e alheios às condições crônicas, somados aos dilemas expressos diretamente na gestão
+        do
+        sistema de saúde e nos
+        retrocessos impostos à APS e às políticas de saúde no Brasil nos últimos anos (GIOVANELLA;
+        FRANCO; ALMEIDA, 2020).</p>
+</div>
 <script>
     $(() => {
-        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
-        apagarJanelas();
-        $(document).find('[id^=btn]').hide();
-        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
-            $(botao).css('cursor', 'pointer');
-            $(botao).hover(() => {
-                //$(document).find(`[id=botao_${index + 1}]`).css('background-color', '#FFA800');
-            });
-            $(botao).mouseleave(() => {
-                //$(document).find(`[id=botao_${index + 1}]`).css('background-color', '#649781');
-            });
-            $(botao).click(() => {
-                apagarJanelas();
-                $(janelas[index]).fadeIn();
-            })
+        let conteudo = $('#conteudo').hide();
+        $('#hotWord-bt').css('cursor', 'pointer').hover(() => {
+            conteudo.fadeIn()
         })
-        function apagarJanelas() {
-            janelas.map((index, janela) => {
-                $(janela).hide();
-            })
-        }
+        $('#hotWord-bt').mouseout(() => {
+            conteudo.fadeOut()
+        })
     })
 </script>
