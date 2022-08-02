@@ -15,8 +15,11 @@
                 documentos oficiais
                 e publicações científicas a partir da década de 1980 com significados próximos (PAIM, 2012).</p>
             <p>Contudo, é importante
-                demarcarmos algumas distinções entre o uso dos termos <b id="botao_1"
-                    style="cursor: pointer;">assistencial</b> e <b id="botao_2" style="cursor: pointer;">atenção</b>.
+                demarcarmos algumas distinções entre o uso dos termos
+                <strong style="width: 40px; background-color: #1F6D4C; display: inline;"><a
+                        id="hotWord-bt">assistencial</a></strong> e
+                <strong style="width: 40px; background-color: #1F6D4C; display: inline;"><a
+                        id="hotWord-bt2">atenção</a></strong>.
             </p>
         </div>
         <div class="animate__animated animate__backInRight"
@@ -27,29 +30,6 @@
                 <p style="font-size: 12px;">Já parou para pensar nisso? </p>
                 <p style="font-size: 12px;">Quais os diferentes significados e implicações associadas ao uso de tais
                     termos?</p>
-            </div>
-        </div>
-        <div>
-            <div id="janela_1" class="jan">
-                <div
-                    style="margin-top: 200px;margin-left: 80px;width: 748px;height: 121px;background: #376551 0% 0% no-repeat padding-box;border: 1px solid #707070;display: flex;flex-direction: column;align-items: center;justify-content: space-around;">
-                    <p style="text-align: center;font: normal normal bold 16px/25px Poppins;color: #FFFFFF;">
-                        ASSISTENCIAL</p>
-                    <p style="font: normal normal normal 16px/25px Poppins;color: #FFFFFF;width: 616px;">
-                        Relaciona-se à assistência
-                        médica ou odontológica centrada em procedimentos individuais.</p>
-                </div>
-            </div>
-            <div id="janela_2" class="jan">
-                <div
-                    style="margin-top: 200px;margin-left: 80px;width: 748px;height: 121px;background: #376551 0% 0% no-repeat padding-box;border: 1px solid #707070;display: flex;flex-direction: column;align-items: center;justify-content: space-around;">
-                    <p style="text-align: center;font: normal normal bold 16px/25px Poppins;color: #FFFFFF;">
-                        ATENÇÃO</p>
-                    <p style="font: normal normal normal 16px/25px Poppins;color: #FFFFFF;width: 616px;">
-                        Além de envolver assistência, inclui ações individuais e coletivas, nos âmbitos de promoção,
-                        proteção, recuperação e
-                        reabilitação da saúde.</p>
-                </div>
             </div>
         </div>
     </div>
@@ -64,29 +44,44 @@
             NA MODELAGEM DE REDES DE ATENÇÃO À SAÚDE</p>
     </div>
 </footer>
+<div id="conteudo"
+    style="position: absolute;top: 0px;left: 20px;width: 640px;border-radius: 10px;display: flex;flex-direction: column;align-items: center;justify-content: center;">
+    <div
+        style="margin-top: 200px;margin-left: 80px;width: 748px;height: 121px;background: #376551 0% 0% no-repeat padding-box;border: 1px solid #707070;display: flex;flex-direction: column;align-items: center;justify-content: space-around;">
+        <p style="text-align: center;font: normal normal bold 16px/25px Poppins;color: #FFFFFF;">
+            ASSISTENCIAL</p>
+        <p style="font: normal normal normal 16px/25px Poppins;color: #FFFFFF;width: 616px;">
+            Relaciona-se à assistência
+            médica ou odontológica centrada em procedimentos individuais.</p>
+    </div>
+</div>
+<div id="conteudo2"
+    style="position: absolute; top: 80px;left: 20px;width: 640px;border-radius: 10px;display: flex;flex-direction: column;align-items: center;justify-content: center;">
+    <div
+        style="margin-top: 140px;margin-left: 80px;width: 748px;height: 121px;background: #376551 0% 0% no-repeat padding-box;border: 1px solid #707070;display: flex;flex-direction: column;align-items: center;justify-content: space-around;">
+        <p style="text-align: center;font: normal normal bold 16px/25px Poppins;color: #FFFFFF;">
+            ATENÇÃO</p>
+        <p style="font: normal normal normal 16px/25px Poppins;color: #FFFFFF;width: 616px;">
+            Além de envolver assistência, inclui ações individuais e coletivas, nos âmbitos de promoção,
+            proteção, recuperação e
+            reabilitação da saúde.</p>
+    </div>
+</div>
 <script>
     $(() => {
-        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
-        apagarJanelas();
-        $(document).find('[id^=btn]').hide();
-        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
-            $(botao).css('cursor', 'pointer');
-            $(botao).hover(() => {
-                $(document).find(`[id=text_${index + 1}]`).css('color', '#FFA800');
-            });
-            $(botao).mouseleave(() => {
-                $(document).find(`[id=text_1]`).css('color', '#006FFF');
-                $(document).find(`[id=text_2]`).css('color', '#CE00FF');
-            });
-            $(botao).click(() => {
-                apagarJanelas();
-                $(janelas[index]).fadeIn();
-            })
+        let conteudo = $('#conteudo').hide();
+        let conteudo2 = $('#conteudo2').hide();
+        $('#hotWord-bt').css('cursor', 'pointer').hover(() => {
+            conteudo.fadeIn()
         })
-        function apagarJanelas() {
-            janelas.map((index, janela) => {
-                $(janela).hide();
-            })
-        }
+        $('#hotWord-bt').mouseout(() => {
+            conteudo.fadeOut()
+        })
+        $('#hotWord-bt2').css('cursor', 'pointer').hover(() => {
+            conteudo2.fadeIn()
+        })
+        $('#hotWord-bt2').mouseout(() => {
+            conteudo2.fadeOut()
+        })
     })
 </script>
