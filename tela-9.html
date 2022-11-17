@@ -1,35 +1,71 @@
-<div style="height: 60px;width: 100%;">
-    <img style="height: 60px;position: absolute;right: 0px;" src="recursos/imgs/H1.png">
-    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">TÓPICO<strong>
-            1</strong></p>
-    <p style="position: absolute;color: white;margin-left: 112px;margin-top: 26px;font-size: 11px;width: 460px;">
-        REDES DE ATENÇÃO À SAÚDE: CONCEPÇÕES, ASPECTOS HISTÓRICOS E ORGANIZATIVOS</p>
-</div>
-<div>
-    <div style="display: flex;">
-        <div style="width: 346px;margin-left: 61px;margin-top: 97px;">
-            <p>Em 2011, a rede de atenção à saúde foi definida no âmbito normativo do SUS, através do Decreto nº
-                7.508, como o conjunto
-                de ações e serviços de saúde articulados em níveis de complexidade crescente, com a finalidade de
-                garantir a
-                integralidade da assistência à saúde, mediante referenciamento do usuário na rede regional e
-                interestadual, conforme
-                pactuado em comissões intergestores, e estando compreendidas no âmbito de uma região de saúde ou em
-                várias delas
-                (BRASIL, 2011b).</p>
+<style>
+    .parent {
+        width: 898px;
+        overflow-x: hidden;
+        float: left;
+    }
+
+    .child {
+        width: 1000px;
+        height: 492px;
+        float: left;
+        cursor: pointer;
+    }
+</style>
+<div style="display: flex;">
+    <div
+        style="width: 792px;height: 490px;right: 1px;background-color: #FFB300; padding-top: 10px;">
+        <div style="margin-left: 11px;">
+            <p style="color: white;margin-left: 30px;/* margin-top: 26px; */font-size: 12px;">
+                TÓPICO<strong>
+                    1</strong></p>
+            <p
+                style="color: white;margin-left: 100px;margin-top: -36px;width: 280px;font: normal normal normal 11px/17px Poppins;font-size: 10px;">
+                REDES DE ATENÇÃO À SAÚDE: CONCEPÇÕES, ASPECTOS HISTÓRICOS E ORGANIZATIVOS</p>
+            <div style="width: 358px;height: 2px;background: #FFFFFF 0% 0% no-repeat padding-box;margin-left: 20px;">
+            </div>
         </div>
-        <div class="animate__animated animate__backInRight">
-            <img src="recursos/imgs/Group_2432.svg" style="width: 362px;margin-left: 70px;margin-top: 24px;">
+        <p style="margin-top: 113px;width: 320px;margin-left: 50px;font: normal normal normal 14px/18px Poppins;">
+            Para melhor análise desses
+            aspectos, vamos percorrer uma breve linha do tempo? Neste percurso, não faremos uma longa caminhada,
+            apenas veremos a demarcação de alguns marcos normativos das políticas públicas de saúde no Brasil,
+            destacando aspectos que ressoaram e ressoam na organização de redes de atenção à saúde e da APS na
+            realidade brasileira. </p>
+
+        <div style="position: absolute;height: 300px;width: 3px;background-color: #265D3B;top: 98px;left: 415px;">
+        </div>
+    </div>
+    <div class="parent">
+        <div class="child">
+            <img src="recursos/imgs/SLIDE_15.svg" style="height: 460px;margin-top: 40px;">
         </div>
     </div>
 </div>
-<footer style="width: 1008px;height: 19px;display: flex;background-color: #1F6D4C;">
-    <div style="margin-top: -8px;display: flex;margin-left: 42px;">
-        <p style="color: white;font-size: 12px;">MÓDULO 3</p>
-        <p style="margin-left: 15px;color: white;font-size: 11px;margin-top: 12px;">EDUCAÇÃO, INTERSETORIALIDADE E
-            TRABALHO EM REDE NA ESF</p>
-        <p style="margin-left: 110px;color: white;font-size: 12px;">UNIDADE 10</p>
-        <p style="margin-left: 15px;color: white;font-size: 11px;margin-top: 5px;width: 230px;">GESTÃO E ORGANIZAÇÃO
-            NA MODELAGEM DE REDES DE ATENÇÃO À SAÚDE</p>
-    </div>
-</footer>
+<script>
+    $(() => {
+        const slider = document.querySelector('.parent');
+        let mouseDown = false;
+        let startX, scrollLeft;
+
+        let startDragging = function (e) {
+            mouseDown = true;
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        };
+        let stopDragging = function (event) {
+            mouseDown = false;
+        };
+
+        slider.addEventListener('mousemove', (e) => {
+            e.preventDefault();
+            if (!mouseDown) { return; }
+            const x = e.pageX - slider.offsetLeft;
+            const scroll = x - startX;
+            slider.scrollLeft = scrollLeft - scroll;
+        });
+
+        slider.addEventListener('mousedown', startDragging, false);
+        slider.addEventListener('mouseup', stopDragging, false);
+        slider.addEventListener('mouseleave', stopDragging, false);
+    })
+</script>

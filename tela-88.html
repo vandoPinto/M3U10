@@ -1,33 +1,50 @@
-<div style="height: 60px;width: 100%;">
-    <img style="height: 60px;position: absolute;right: 0px;" src="recursos/imgs/H1.png">
-    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">TÓPICO<strong>
-            3</strong></p>
-    <p style="position: absolute;color: white;margin-left: 112px;margin-top: 26px;font-size: 11px;width: 450px;">
-        INTEGRAÇÃO ASSISTENCIAL E COMPONENTES DA REDE DE ATENÇÃO À SAÚDE</p>
+<div class="coluna-esquerda altura-1_1 largura-1_3 centro">
+    <img src="recursos/imgs/T5.png" style="top: 0px;left: 0px;width: 138px;">
 </div>
-<div>
-    <div style="margin-left: 109px;margin-top: 122px;width: 670px;">
-        <p>A despeito dos vários avanços obtidos e dos retrocessos ao longo da implementação do SUS, ainda persistem
-            desigualdades
-            no acesso e na utilização dos serviços de saúde, as quais foram exacerbadas pela pandemia de covid-19
-            (CUNHA;
-            VIEIRA-DA-SILVA, 2010; BRASIL, 2009; PAIM, 2008; TRAVASSOS; CASTRO, 2008; VIEIRA-DA-SILVA, 2005;
-            ALBUQUERQUE; RIBEIRO,
-            2020). </p>
-        <p>No Brasil, é mantido um padrão com marcantes desigualdades sociais no acesso e na utilização dos serviços
-            de
-            saúde, em que as pessoas em posição de maior desvantagem social, que mais necessitam dos serviços de
-            saúde, têm menor
-            probabilidade de busca e utilização desses serviços (TRAVASSOS; CASTRO, 2008).</p>
+<div style="margin-left: 170px;margin-top: 146px;">
+    <div>
+        <p style="color: #FFA800;font-size: 20px;font-weight: bolder;">Apoio matricial/matriciamento</p>
+        <p style="width: 692px;margin-top: 40px;">O <strong
+                style="width: 40px; background-color: #1F6D4C; display: inline;"><a id="hotWord-bt"
+                    style="cursor: pointer;">apoio matricial</a></strong>, também conhecido como matriciamento, é um
+            arranjo
+            organizacional
+            e um método de compartilhamento de
+            conhecimentos que permite o suporte técnico pedagógico e institucional para retaguarda especializada
+            para as equipes
+            responsáveis pela construção de ações para a população adscrita, nomeadas equipes de referência
+            (LAZARINO <i>et al.</i>, 2019).</p>
     </div>
 </div>
-<footer style="width: 1008px;height: 19px;display: flex;background-color: #1F6D4C;">
-    <div style="margin-top: -8px;display: flex;margin-left: 42px;">
-        <p style="color: white;font-size: 12px;">MÓDULO 3</p>
-        <p style="margin-left: 15px;color: white;font-size: 11px;margin-top: 12px;">EDUCAÇÃO, INTERSETORIALIDADE E
-            TRABALHO EM REDE NA ESF</p>
-        <p style="margin-left: 110px;color: white;font-size: 12px;">UNIDADE 10</p>
-        <p style="margin-left: 15px;color: white;font-size: 11px;margin-top: 5px;width: 230px;">GESTÃO E ORGANIZAÇÃO
-            NA MODELAGEM DE REDES DE ATENÇÃO À SAÚDE</p>
-    </div>
-</footer>
+<div id="conteudo"
+    style="position: absolute;background-color: rgb(31, 109, 76);top: 260px;left: 20px;width: 690px;border-radius: 10px;flex-direction: column;align-items: center;justify-content: center;display: flex;">
+    <p style="width: 640px;text-align: left;font: normal normal normal 14px/18px Poppins;color: #FFFFFF;">
+        É um modo de produzir saúde em que duas ou mais equipes, num processo de construção
+        compartilhada, criam uma proposta de
+        intervenção pedagógico-terapêutica. Distingue-se do atendimento realizado por um
+        especialista
+        dentro de uma unidade de
+        APS tradicional. A proposta integradora do matriciamento visa transformar a lógica
+        tradicional
+        dos sistemas de saúde:
+        encaminhamentos, referência e contrarreferência, protocolos e centros de regulação. Na
+        horizontalização decorrente do
+        processo de matriciamento, o sistema de saúde se reestrutura em dois tipos de equipes:
+        equipe de
+        referência e equipe de
+        apoio matricial. Os efeitos burocráticos e pouco dinâmicos da lógica tradicional podem ser
+        atenuados por ações
+        horizontais que integrem os componentes e seus saberes nos diferentes níveis de atenção
+        (CHIAVERINI, 2011).</p>
+</div>
+<script>
+    $(() => {
+        let conteudo = $('#conteudo').hide();
+        $('#hotWord-bt').css('cursor', 'pointer').hover(() => {
+            conteudo.fadeIn()
+        })
+        $('#hotWord-bt').mouseout(() => {
+            conteudo.fadeOut()
+        })
+    })
+</script>

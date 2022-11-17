@@ -6,71 +6,20 @@
         MODELOS DE ATENÇÃO À SAÚDE: DIMENSÕES GERENCIAL, ORGANIZATIVA E TECNOASSISTENCIAL</p>
 </div>
 <div>
-    <div style="display: flex;margin-top: 32px;margin-left: 24px;">
-        <div style="width: 358px;">
-            <p>O uso e a concepção de tecnologia devem ser entendidos para além de uma concepção comumente
-                utilizada, restrita a meios
-                e instrumentos técnico-científicos materiais.</p>
-            <p>Tecnologia em saúde pode ser compreendida também
-                enquanto saber e seus
-                desdobramentos técnicos materiais e não materiais, que dão sentido técnico e social articulado ao
-                processo de trabalho,
-                possibilitando organizar internamente as práticas referentes à saúde e à doença (MENDES-GONÇALVES,
-                1994).</p>
-            <p>Tal concepção
-                amplia-se com o reconhecimento das várias dimensões e usos da tecnologia no trabalho em saúde,
-                classificando-as em dura,
-                leve-dura e leve. </p>
-            <p>Clique sobre os termos para conhecê-los.</p>
+    <div style="display: flex;">
+        <div style="width: 286px;margin-top: 46px;margin-left: 85px;">
+            <p>A organização e a gestão da ESF, potencializando práticas ampliadas, não se esgotam dentro da unidade
+                ou do setor saúde.</p>
+            <p>Requer o trabalho em equipe, a articulação com demais serviços que compõem a rede de atenção, a
+                intersetorialidade e a
+                participação social, com desenvolvimento de articulações e ações no território.</p>
+            <p>Assim, é fundamental a mobilização de usuários, gestores, trabalhadores e coletivos, fomentando sua
+                participação nos diferentes espaços de decisão e do cuidado em saúde.</p>
         </div>
         <div class="animate__animated animate__backInRight">
-            <img id="botao_1" src="recursos/imgs/Group_2518.svg"
-                style="width: 301px; position: absolute; top: 36px; right: -366px; cursor: pointer;" class="zoom">
-            <img id="botao_2" src="recursos/imgs/Group_2782.svg"
-                style="width: 301px; position: absolute; top: 140px; left: 114px; cursor: pointer;" class="zoom">
-            <img id="botao_3" src="recursos/imgs/Group_2520.svg"
-                style="width: 301px; position: absolute; top: 248px; left: 154px; cursor: pointer;" class="zoom">
-        </div>
-        <div>
-            <div id="janela_1" class="jan" style="cursor: pointer; display: none;">
-                <div
-                    style="width: 382px;height: 341px;background: #3B265D 0% 0% no-repeat padding-box;display: flex;flex-direction: column;align-items: center;justify-content: space-around;margin-top: 90px;margin-left: 250px;">
-                    <p style="text-align: center;font: normal normal bold 30px/18px Poppins;color: #FFFFFF;">DURA
-                    </p>
-                    <p style="font: normal normal normal 24px/30px Poppins;color: #FFFFFF;width: 320px;">A
-                        tecnologia dura é composta
-                        por equipamentos, máquinas, normas e estruturas organizacionais.</p>
-                </div>
-                <p style="position: absolute;top: 90px;left: 610px;color: white;">X</p>
-            </div>
-            <div id="janela_2" class="jan" style="cursor: pointer; display: none;">
-                <div
-                    style="width: 382px;height: 341px;background: #8B0000 0% 0% no-repeat padding-box;display: flex;flex-direction: column;align-items: center;justify-content: space-around;margin-top: 90px;margin-left: 250px;">
-                    <p style="text-align: center;font: normal normal bold 30px/18px Poppins;color: #FFFFFF;">
-                        LEVE-DURA
-                    </p>
-                    <p style="font: normal normal normal 24px/30px Poppins;color: #FFFFFF;width: 320px;">A
-                        tecnologia
-                        leve-dura é caracterizada pelos saberes estruturados que operam no processo de trabalho,
-                        como a
-                        clínica e a
-                        epidemiologia.</p>
-                </div>
-                <p style="position: absolute;top: 90px;left: 610px;color: white;">X</p>
-            </div>
-            <div id="janela_3" class="jan" style="cursor: pointer; display: none;">
-                <div
-                    style="width: 382px;height: 341px;background: #FF9D00 0% 0% no-repeat padding-box;display: flex;flex-direction: column;align-items: center;justify-content: space-around;margin-top: 90px;margin-left: 250px;">
-                    <p style="text-align: center;font: normal normal bold 30px/18px Poppins;color: #FFFFFF;">LEVE
-                    </p>
-                    <p style="font: normal normal normal 24px/30px Poppins;color: #FFFFFF;width: 320px;">As
-                        tecnologias
-                        leves são aquelas implicadas na produção de relações entre dois sujeitos, que só têm
-                        materialidade em
-                        ato, configurando-se nas práticas de acolhimento, vínculo e autonomização.</p>
-                </div>
-                <p style="position: absolute;top: 80px;left: 610px;color: white;">X</p>
-            </div>
+            <img src="recursos/imgs/Img-Tela-62.jpg" style="width: 387px;margin-left: 85px;margin-top: 61px;">
+            <p style="font: normal normal normal 10px/18px Poppins;margin-left: 85px;">Foto: Sandro Araújo/Agência
+                Saúde DF</p>
         </div>
     </div>
 </div>
@@ -84,29 +33,3 @@
             NA MODELAGEM DE REDES DE ATENÇÃO À SAÚDE</p>
     </div>
 </footer>
-<script>
-    $(() => {
-        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
-        apagarJanelas();
-        $(document).find('[id^=btn]').hide();
-        let botoes = $(document).find('[id^=botao]').addClass('zoom').map((index, botao) => {
-            $(botao).css('cursor', 'pointer');
-            $(botao).hover(() => {
-                $(document).find(`[id=text_${index + 1}]`).css('color', '#FFA800');
-            });
-            $(botao).mouseleave(() => {
-                $(document).find(`[id=text_1]`).css('color', '#006FFF');
-                $(document).find(`[id=text_2]`).css('color', '#CE00FF');
-            });
-            $(botao).click(() => {
-                apagarJanelas();
-                $(janelas[index]).fadeIn();
-            })
-        })
-        function apagarJanelas() {
-            janelas.map((index, janela) => {
-                $(janela).hide();
-            })
-        }
-    })
-</script>

@@ -1,87 +1,83 @@
-<div style="height: 60px;width: 100%;">
-    <img style="height: 60px;position: absolute;right: 0px;" src="recursos/imgs/H1.png">
-    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">TÓPICO<strong>
-            3</strong></p>
-    <p style="position: absolute;color: white;margin-left: 112px;margin-top: 26px;font-size: 11px;width: 450px;">
-        INTEGRAÇÃO ASSISTENCIAL E COMPONENTES DA REDE DE ATENÇÃO À SAÚDE</p>
-</div>
-<div>
-    <div style="margin-left: 116px;margin-top: 46px;width: 658px;">
-        <p>O complexo regulador é composto por uma ou mais centrais de regulação, que compreendem toda a ação-meio
-            do
-            processo
-            regulatório. Recebem as solicitações e fazem o processamento e o agendamento delas (MENDES, 2011).</p>
-        <p>Clique sobre as
-            centrais de regulação para conhecer a área de atuação de cada uma.</p>
-        <div
-            style="margin-top: -19px;display: flex;flex-direction: column;justify-content: space-between;height: 240px;">
-            <div id="botao_1" style="display: flex;width: 1020px;align-items: center;justify-content: space-between;">
-                <p
-                    style="width: 250px;text-align: center;font: normal normal bold 18px/18px Poppins;letter-spacing: 0px;color: #376551;margin-left: 207px;margin-top: 30px;">
-                    CENTRAL DE REGULAÇÃO DE URGÊNCIA</p>
-                <p id="janela_1"
-                    style="width: 530px; text-align: left; font: 18px / 18px Poppins; color: rgb(255, 136, 0); ">
-                    Regula a atenção de urgência e que é realizada pelo Samu.</p>
-            </div>
-            <div id="botao_2" style="display: flex;width: 1020px;align-items: center;justify-content: space-between;">
-                <p
-                    style="width: 250px;text-align: center;font: normal normal bold 18px/18px Poppins;letter-spacing: 0px;color: #376551;margin-left: 207px;margin-top: 30px;">
-                    CENTRAL DE
-                    REGULAÇÃO DE INTERNAÇÕES ELETIVAS</p>
-                <p id="janela_2"
-                    style="width: 530px; text-align: left; font: 18px / 18px Poppins; color: rgb(255, 136, 0); ">
-                    Regula leitos hospitalares dos estabelecimentos de saúde vinculados ao SUS, próprios,
-                    contratados ou
-                    conveniados.</p>
-            </div>
-            <div id="botao_3" style="display: flex;width: 1020px;align-items: center;justify-content: space-between;">
-                <p
-                    style="width: 250px;text-align: center;font: normal normal bold 18px/18px Poppins;letter-spacing: 0px;color: #376551;margin-left: 207px;margin-top: 40px;">
-                    CENTRAL DE
-                    REGULAÇÃO DE CONSULTAS E EXAMES</p>
-                <p id="janela_3"
-                    style="width: 530px; text-align: left; font: 18px / 18px Poppins; color: rgb(255, 136, 0); ">
-                    Regula o acesso das pessoas às consultas especializadas, aos serviços de apoio de diagnóstico e
-                    terapêutico, bem como
-                    aos demais procedimentos ambulatoriais especializados ou não.</p>
-            </div>
-        </div>
-    </div>
-</div>
-<footer style="width: 1008px;height: 19px;display: flex;background-color: #1F6D4C;">
-    <div style="margin-top: -8px;display: flex;margin-left: 42px;">
-        <p style="color: white;font-size: 12px;">MÓDULO 3</p>
-        <p style="margin-left: 15px;color: white;font-size: 11px;margin-top: 12px;">EDUCAÇÃO, INTERSETORIALIDADE E
-            TRABALHO EM REDE NA ESF</p>
-        <p style="margin-left: 110px;color: white;font-size: 12px;">UNIDADE 10</p>
-        <p style="margin-left: 15px;color: white;font-size: 11px;margin-top: 5px;width: 230px;">GESTÃO E ORGANIZAÇÃO
-            NA MODELAGEM DE REDES DE ATENÇÃO À SAÚDE</p>
-    </div>
-</footer>
-<script>
-    $(() => {
-        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
-        apagarJanelas();
-        $(document).find('[id^=btn]').hide();
-        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
-            $(botao).css('cursor', 'pointer');
-            $(botao).hover(() => {
-                //$(document).find(`[id=botao_${index + 1}]`).css('background-color', '#FFA800');
-            });
-            $(botao).mouseleave(() => {
-                //$(document).find(`[id=botao_${index + 1}]`).css('background-color', '#649781');
-            });
-            $(botao).click(() => {
-                //apagarJanelas();
-                $(janelas[index]).fadeIn();
-                $(document).find(`[id=botao_${index + 1}]`).css('margin-left', '-260px');
+<style>
+    p {
+        font-size: 13px;
+    }
+</style>
+<div style="margin-left: 29px;margin-top: 3px;width: 848px;">
+    <p>
+        MERHY, E. E. <i>et al.</i> Em busca das ferramentas analisadoras das tecnologias em saúde: a informação e o
+        dia
+        a dia de um
+        serviço, interrogando e gerindo trabalho em saúde. <i>In:</i> MERHY, E. E.; ONOCKO, R. (org.). <b>Agir em
+            Saúde:</b> um
+        desafio para o
+        público. 2. ed. São Paulo: Hucitec, 2002. p. 113-150.
+    </p>
+    <p>
+        MISHIMA, S. M. <i>et al.</i> Trabalhadores de saúde: problema ou possibilidade de reformulação do trabalho em
+        saúde? –
+        Alguns
+        aspectos do trabalho em saúde e da relação gestor / trabalhador. <i>In:</i> BRASIL. Ministério da Saúde. <b>
+            Observatório de
+            Recursos Humanos em Saúde no Brasil:
+        </b> estudos e análises. Rio de Janeiro: Ed. Fiocruz, 2003. p. 137-156.
+    </p>
 
-            })
-        })
-        function apagarJanelas() {
-            janelas.map((index, janela) => {
-                $(janela).hide();
-            })
-        }
-    })
-</script>
+    <p>
+        MOROSINI, M. V. G. C.; CORBO, A. D. A. (org.). <b>Modelos de atenção e a saúde da família.</b> Rio de Janeiro:
+        EPSJV/Fiocruz,
+        2007.
+    </p>
+
+    <p>
+        OLIVEIRA, M. S.; ARTMANN, E. Regionalização dos serviços de saúde: desaﬁos para o caso de Angola. <b>Cad. Saúde
+            Pública,</b>
+        Rio de Janeiro, v. 25, n. 4, p. 751-760, abr. 2009.
+    </p>
+
+    <p>
+        ONOCKO-CAMPOS, R. T. <i>et al.</i> Avaliação de estratégias inovadoras na organização da atenção primária à
+        saúde. <b>
+            Rev Saúde
+            Pública,
+        </b> <i>[s. l.]</i>, v. 46, n. 1, p. 43-50, fev. 2012. Disponível em:
+        <a href="https://www.scielo.br/j/rsp/a/rCCHYRy46ZtbpZDWhMmZbLr/?lang=pt" target="_blank"
+            style="color: #1592E6;">https://www.scielo.br/j/rsp/a/rCCHYRy46ZtbpZDWhMmZbLr/?lang=pt</a>. Acesso em: 19
+        abr.
+        2022.
+    </p>
+
+    <p>
+        ORGANIZACIÓN PAN-AMERICANA DE LA SALUD. <b>Redes Integradas de Servicios de Salud Basadas en la Atención
+            Primaria.</b>
+        Washington, D.C.: OPAS, 2009.
+    </p>
+
+    <p>
+        PAIM, J. S. Modelos de atenção à Saúde no Brasil. <i>In:</i> GIOVANELLA, L. <i>et al.</i> (org.). <b>
+            Políticas e Sistema de Saúde no
+            Brasil.
+        </b> Rio de Janeiro: Fiocruz; CEBES, 2012. p. 459-491.
+    </p>
+
+    <p>
+        PAIM, J. S. Reforma Sanitária Brasileira: avanços, limites e perspectivas. <i>In:</i> MATTA, G. C.; LIMA, J. C.
+        F. (orgs.).
+        <b>Estado, Sociedade e Formação Profissional em Saúde.</b> Rio de Janeiro: Editora Fiocruz, 2008. p. 91-122.
+    </p>
+
+    <p>
+        PAIM, J. S. <i>et al.</i> O sistema de saúde brasileiro: história, avanços e desafios. <b>The Lancet,</b> <i>[s.
+            l.]</i>, v. 1,
+        p. 11-31, maio
+        2011.
+    </p>
+
+    <p>
+        PINHEIRO, R.; SILVA JR., A. G. A centralidade do usuário na avaliação em saúde: outras abordagens. <i>In:</i>
+        PINHEIRO, R.;
+        MARTINS, P. H. N. (org.). <b>Avaliação em saúde na perspectiva do usuário:</b> abordagem multicêntrica. Rio de
+        Janeiro:
+        CEPESC/IMS-UERJ; Recife: Editora Universitária UFPE; São Paulo: ABRASCO, 2009. p. 37-52.
+    </p>
+</div>

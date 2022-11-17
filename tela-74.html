@@ -1,25 +1,51 @@
 <div style="height: 60px;width: 100%;">
     <img style="height: 60px;position: absolute;right: 0px;" src="recursos/imgs/H1.png">
     <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">TÓPICO<strong>
-            2</strong></p>
-    <p style="position: absolute;color: white;margin-left: 112px;margin-top: 26px;font-size: 11px;width: 550px;">
-        MODELOS DE ATENÇÃO À SAÚDE: DIMENSÕES GERENCIAL, ORGANIZATIVA E TECNOASSISTENCIAL</p>
+            3</strong></p>
+    <p style="position: absolute;color: white;margin-left: 112px;margin-top: 26px;font-size: 11px;width: 450px;">
+        INTEGRAÇÃO ASSISTENCIAL E COMPONENTES DA REDE DE ATENÇÃO À SAÚDE</p>
 </div>
 <div>
-    <div style="margin-left: 91px;margin-top: 117px;width: 708px;">
-        <p>No caso específico da ESF, inicialmente foi concebida e implantada como programa focalizado, com posição
-            marginal no
-            contexto da política de saúde. Posteriormente, foi assumida como estratégia prioritária para
-            implementação da APS e
-            reorientação do modelo de atenção no SUS. A partir de 1998, desenvolveu-se em todo país, com grande
-            expansão de
-            cobertura e ampliação quantitativa das equipes em variados municípios e regiões. </p>
-        <p>Todavia, devemos considerar as
-            diferenças regionais, estaduais e municipais verificadas nesse processo, considerando que a gestão da
-            Atenção Básica é
-            muito variada no país, tendo em vista desigualdades demográficas, econômicas, culturais e institucionais
-            (MOROSINI;
-            CORBO, 2007)</p>
+    <div style="margin-left: 116px;margin-top: 46px;width: 658px;">
+        <p>O complexo regulador é composto por uma ou mais centrais de regulação, que compreendem toda a ação-meio
+            do
+            processo
+            regulatório. Recebem as solicitações e fazem o processamento e o agendamento delas (MENDES, 2011).</p>
+        <p>Clique sobre as
+            centrais de regulação para conhecer a área de atuação de cada uma.</p>
+        <div
+            style="margin-top: -19px;display: flex;flex-direction: column;justify-content: space-between;height: 240px;">
+            <div id="botao_1" style="display: flex;width: 1020px;align-items: center;justify-content: space-between;">
+                <p
+                    style="width: 250px;text-align: center;font: normal normal bold 18px/18px Poppins;letter-spacing: 0px;color: #376551;margin-left: 207px;margin-top: 30px;">
+                    CENTRAL DE REGULAÇÃO DE URGÊNCIA</p>
+                <p id="janela_1"
+                    style="width: 530px; text-align: left; font: 18px / 18px Poppins; color: rgb(255, 136, 0); ">
+                    Regula a atenção de urgência e que é realizada pelo Samu.</p>
+            </div>
+            <div id="botao_2" style="display: flex;width: 1020px;align-items: center;justify-content: space-between;">
+                <p
+                    style="width: 250px;text-align: center;font: normal normal bold 18px/18px Poppins;letter-spacing: 0px;color: #376551;margin-left: 207px;margin-top: 30px;">
+                    CENTRAL DE
+                    REGULAÇÃO DE INTERNAÇÕES ELETIVAS</p>
+                <p id="janela_2"
+                    style="width: 530px; text-align: left; font: 18px / 18px Poppins; color: rgb(255, 136, 0); ">
+                    Regula leitos hospitalares dos estabelecimentos de saúde vinculados ao SUS, próprios,
+                    contratados ou
+                    conveniados.</p>
+            </div>
+            <div id="botao_3" style="display: flex;width: 1020px;align-items: center;justify-content: space-between;">
+                <p
+                    style="width: 250px;text-align: center;font: normal normal bold 18px/18px Poppins;letter-spacing: 0px;color: #376551;margin-left: 207px;margin-top: 40px;">
+                    CENTRAL DE
+                    REGULAÇÃO DE CONSULTAS E EXAMES</p>
+                <p id="janela_3"
+                    style="width: 530px; text-align: left; font: 18px / 18px Poppins; color: rgb(255, 136, 0); ">
+                    Regula o acesso das pessoas às consultas especializadas, aos serviços de apoio de diagnóstico e
+                    terapêutico, bem como
+                    aos demais procedimentos ambulatoriais especializados ou não.</p>
+            </div>
+        </div>
     </div>
 </div>
 <footer style="width: 1008px;height: 19px;display: flex;background-color: #1F6D4C;">
@@ -32,3 +58,30 @@
             NA MODELAGEM DE REDES DE ATENÇÃO À SAÚDE</p>
     </div>
 </footer>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        $(document).find('[id^=btn]').hide();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).css('cursor', 'pointer');
+            $(botao).hover(() => {
+                //$(document).find(`[id=botao_${index + 1}]`).css('background-color', '#FFA800');
+            });
+            $(botao).mouseleave(() => {
+                //$(document).find(`[id=botao_${index + 1}]`).css('background-color', '#649781');
+            });
+            $(botao).click(() => {
+                //apagarJanelas();
+                $(janelas[index]).fadeIn();
+                $(document).find(`[id=botao_${index + 1}]`).css('margin-left', '-260px');
+
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

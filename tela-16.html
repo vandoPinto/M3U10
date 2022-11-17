@@ -6,52 +6,34 @@
         REDES DE ATENÇÃO À SAÚDE: CONCEPÇÕES, ASPECTOS HISTÓRICOS E ORGANIZATIVOS</p>
 </div>
 <div>
-    <div style="margin-left: 52px;margin-top: 75px;width: 784px;">
-        <p>Ao longo dos anos 2000 e parte dos anos 2010, tivemos um movimento de ampliação e fortalecimento da APS
-            convergente e
-            impulsionado por políticas e instrumentos normativos que assumiram a APS como ordenadora das redes e o
-            seu
-            caráter
-            substitutivo para reorganização das práticas.</p>
-        <p>Como exemplos importantes, podemos citar (AQUINO <i>et al.</i>, 2014):</p>
-    </div>
-    <div
-        style="margin-top: 37px;display: flex;flex-direction: column;justify-content: space-between;align-items: center;height: 120px;">
-        <div id="botao_1"
-            style="width: 491px; height: 43px; background: 0% 0% no-repeat padding-box padding-box rgb(100, 151, 129); cursor: pointer;"
-            class="zoom">
-            <p
-                style="text-align: center;font: normal normal bold 14px/18px Poppins;letter-spacing: 0px;color: #FFFFFF;">
-                Política Nacional da Atenção Básica (PNAB) de 2006.</p>
+    <div style="display: flex;">
+        <div style="width: 374px;margin-left: 29px;margin-top: 80px;">
+            <p>O caráter hierarquizado da rede não deve ser pensado como se um serviço fosse mais
+                importante
+                ou mais poderoso
+                do que outro. </p>
+            <p>A hierarquização prevista para a rede tem como intenção o uso dos recursos disponíveis de maneira
+                mais
+                racional para atender mais e melhor as pessoas (racionalização em vez de racionamento). Portanto, os
+                entes federados
+                negociam e entram em acordo sobre ações, serviços, organização do atendimento e outras relações
+                dentro
+                do SUS (SOLLA;
+                PAIM, 2014).</p>
         </div>
-        <div id="botao_2"
-            style="width: 491px; height: 61px; background: 0% 0% no-repeat padding-box padding-box rgb(100, 151, 129); cursor: pointer;"
-            class="zoom">
-            <p
-                style="text-align: center;font: normal normal bold 14px/18px Poppins;letter-spacing: 0px;color: #FFFFFF;">
-                Criação dos Núcleos Ampliados de Saúde<br> da Família (NASF), em 2008.</p>
-        </div>
-    </div>
-    <div>
-        <div id="janela_1" class="jan" style="cursor: pointer; display: none;">
-            <div
-                style="width: 625px;height: 202px;background: #376551 0% 0% no-repeat padding-box;margin-top: 170px;margin-left: 130px;display: flex;align-items: center;justify-content: center;">
-                <p style="text-align: center;font: normal normal bold 14px/18px Poppins;color: #FFAA00;width: 453px;">
-                    Reafirmada na
-                    segunda edição de 2011, explicitando a eleição da Saúde da Família como estratégia
-                    prioritária para
-                    expansão e consolidação da APS no Brasil.</p>
+        <div class="animate__animated animate__backInRight"
+            style="margin-top: 107px;margin-left: 29px;display: flex;flex-direction: row;width: 423px;height: 165px;top: 139px;right: 15px;background-color: #CCDFD7;border-radius: 10px;">
+            <img src="recursos/imgs/lampada.svg" style="width: 60px;height: 60px;margin-top: 58px;margin-left: 17px;">
+            <div style="display: initial;margin-left: 15px;margin-top: -5px;width: 302px;">
+                <p style="font-weight: bold;color: #1F6D4C;font-size: 15px;">PARA REFLETIR</p>
+                <p style="font-size: 12px;">É um equívoco entender que há superioridade entre serviços
+                    hospitalares e a APS ou entre União, estados, municípios e
+                    Distrito Federal.</p>
+                <p style="font-size: 12px;">Já parou para refletir sobre isso? </p>
+                <p style="font-size: 12px;">Como profissionais, gestores e população pensam sobre isso no
+                    local
+                    onde você trabalha?</p>
             </div>
-            <p style="position: absolute;top: 170px;left: 730px;color:#FFAA00;">X</p>
-        </div>
-        <div id="janela_2" class="jan" style="cursor: pointer; display: none;">
-            <div
-                style="width: 625px;height: 202px;background: #376551 0% 0% no-repeat padding-box;margin-top: 170px;margin-left: 130px;display: flex;align-items: center;justify-content: center;">
-                <p style="text-align: center;font: normal normal bold 14px/18px Poppins;color: #FFAA00;width: 453px;">
-                    Para apoiar a inserção da Estratégia de Saúde da Família (ESF) na rede de serviços e ampliar a
-                    resolutividade da APS.</p>
-            </div>
-            <p style="position: absolute;top: 170px;left: 730px;color:#FFAA00;">X</p>
         </div>
     </div>
 </div>
@@ -65,28 +47,3 @@
             NA MODELAGEM DE REDES DE ATENÇÃO À SAÚDE</p>
     </div>
 </footer>
-<script>
-    $(() => {
-        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
-        apagarJanelas();
-        $(document).find('[id^=btn]').hide();
-        let botoes = $(document).find('[id^=botao]').addClass('zoom').map((index, botao) => {
-            $(botao).css('cursor', 'pointer');
-            $(botao).hover(() => {
-                $(document).find(`[id=botao_${index + 1}]`).css('background-color', '#FFA800');
-            });
-            $(botao).mouseleave(() => {
-                $(document).find(`[id=botao_${index + 1}]`).css('background-color', '#649781');
-            });
-            $(botao).click(() => {
-                apagarJanelas();
-                $(janelas[index]).fadeIn();
-            })
-        })
-        function apagarJanelas() {
-            janelas.map((index, janela) => {
-                $(janela).hide();
-            })
-        }
-    })
-</script>

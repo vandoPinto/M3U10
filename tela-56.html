@@ -1,22 +1,69 @@
-<div class="coluna-esquerda altura-1_1 largura-1_3 centro">
-    <img src="recursos/imgs/T5.png" style="top: 0px;left: 0px;width: 138px;">
+<div style="height: 60px;width: 100%;">
+    <img style="height: 60px;position: absolute;right: 0px;" src="recursos/imgs/H1.png">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">TÓPICO<strong>
+            3</strong></p>
+    <p style="position: absolute;color: white;margin-left: 112px;margin-top: 26px;font-size: 11px;width: 450px;">
+        INTEGRAÇÃO ASSISTENCIAL E COMPONENTES DA REDE DE ATENÇÃO À SAÚDE</p>
 </div>
-<div style="margin-left: 181px;margin-top: 113px;display: flex;width: 638px;">
-    <div>
-        <p style="color: #FFA800;font-size: 20px;font-weight: bolder;">Estratégia Saúde da Família, limites e
-            possibilidades para reversão do modelo de atenção a partir da APS</p>
-        <p style="width: 692px;margin-top: 32px;">A Atenção Primária à Saúde caracteriza-se por um conjunto de ações
-            de saúde, de âmbito individual e coletivo,
-            objetivando desenvolver uma atenção integral que impacte na situação de saúde e na autonomia das pessoas
-            e nos
-            determinantes e condicionantes de saúde das coletividades, devendo ser o contato preferencial dos
-            usuários, a principal
-            porta de entrada e o centro de comunicação da rede de atenção à saúde, orientando-se pelos princípios da
-            universalidade,
-            da acessibilidade, do vínculo, da continuidade do cuidado, da integralidade da atenção, da
-            responsabilização sanitária,
-            da humanização, da equidade e da participação social, considerando o sujeito em sua singularidade e
-            inserção
-            sociocultural, no sentido de produzir a atenção integral (BRASIL, 2011a).</p>
+<div>
+    <div style="display: flex;">
+        <div style="width: 357px;margin-left: 53px;margin-top: 17px;">
+            <p style="color: #FFA800;font-size: 20px;font-weight: bolder;">Fragmentação e acesso à rede de atenção à
+                saúde: o que revelam itinerários terapêuticos?</p>
+            <p>Os sistemas de saúde precisam estar organizados para responder igualmente aos usuários com condições
+                crônicas e com
+                quadros clínicos agudos, todavia, para não reforçar sua histórica fragmentação, não podem e não
+                devem, por razões de
+                eficácia, economicidade e qualidade da atenção, dicotomizarem-se em subsistemas de cuidados crônicos
+                e cuidados agudos.</p>
+            <p>O enfrentamento desse antigo <strong style="width: 40px; background-color: #1F6D4C; display: inline;"><a
+                        id="hotWord-bt" style="cursor: pointer;">dilema</a></strong> dos sistemas de saúde só pode ser
+                feito com a
+                construção
+                de
+                efetivas redes de
+                atenção à saúde (SILVA; MAGALHÃES JR., 2008).</p>
+        </div>
+        <div class="animate__animated animate__backInRight">
+            <img src="recursos/imgs/Group_2432.svg" style="width: 362px;margin-left: 74px;margin-top: 24px;">
+        </div>
     </div>
 </div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #1F6D4C;">
+    <div style="margin-top: -8px;display: flex;margin-left: 42px;">
+        <p style="color: white;font-size: 12px;">MÓDULO 3</p>
+        <p style="margin-left: 15px;color: white;font-size: 11px;margin-top: 12px;">EDUCAÇÃO, INTERSETORIALIDADE E
+            TRABALHO EM REDE NA ESF</p>
+        <p style="margin-left: 110px;color: white;font-size: 12px;">UNIDADE 10</p>
+        <p style="margin-left: 15px;color: white;font-size: 11px;margin-top: 5px;width: 230px;">GESTÃO E ORGANIZAÇÃO
+            NA MODELAGEM DE REDES DE ATENÇÃO À SAÚDE</p>
+    </div>
+</footer>
+<div id="conteudo"
+    style="position: absolute; background-color: rgb(31, 109, 76); top: 80px; left: 20px; width: 640px; border-radius: 10px; display: none; flex-direction: column; align-items: center; justify-content: center;">
+    <p style="width: 580px;text-align: left;font: normal normal normal 14px/18px Poppins; color: white;">
+        Por um lado, temos a necessidade de organização de redes regionalizadas de atenção à saúde, o
+        que
+        está no arcabouço
+        jurídico-legal do SUS e é reforçado pelas diretrizes da política de saúde com ênfase na
+        regionalização (BRASIL, 2006).</p>
+    <p style="width: 580px;text-align: left;font: normal normal normal 14px/18px Poppins; color: white;">
+        Por outro, ainda convivemos com problemas característicos de sistemas fragmentados de saúde,
+        voltados para problemas
+        agudos e alheios às condições crônicas, somados aos dilemas expressos diretamente na gestão
+        do
+        sistema de saúde e nos
+        retrocessos impostos à APS e às políticas de saúde no Brasil nos últimos anos (GIOVANELLA;
+        FRANCO; ALMEIDA, 2020).</p>
+</div>
+<script>
+    $(() => {
+        let conteudo = $('#conteudo').hide();
+        $('#hotWord-bt').css('cursor', 'pointer').hover(() => {
+            conteudo.fadeIn()
+        })
+        $('#hotWord-bt').mouseout(() => {
+            conteudo.fadeOut()
+        })
+    })
+</script>

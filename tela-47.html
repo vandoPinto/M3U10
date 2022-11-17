@@ -6,76 +6,14 @@
         MODELOS DE ATENÇÃO À SAÚDE: DIMENSÕES GERENCIAL, ORGANIZATIVA E TECNOASSISTENCIAL</p>
 </div>
 <div>
-    <div style="margin-left: 109px;margin-top: 38px;width: 672px;">
-        <p>Para além do processo de trabalho, numa perspectiva mais ampliada, pode-se conceber modelo de atenção à
-            saúde de maneira
-            sistêmica, articulando três dimensões (TEIXEIRA; VILASBÔAS, 2014).</p>
-        <p>Clique sobre cada item para conhecer essas dimensões.</p>
-        <div
-            style="margin-top: 41px;display: flex;flex-direction: column;justify-content: space-between;height: 140px;">
-            <div id="botao_1"
-                style="width: 672px; height: 41px; background: 0% 0% no-repeat padding-box padding-box rgb(100, 151, 129); display: flex; align-items: center; justify-content: center; cursor: pointer;"
-                class="zoom">
-                <p style="text-align: center;font: normal normal bold 18px/18px Poppins;color: #FFFFFF;">GERENCIAL
-                </p>
-            </div>
-            <div id="botao_2"
-                style="width: 672px; height: 41px; background: 0% 0% no-repeat padding-box padding-box rgb(100, 151, 129); display: flex; align-items: center; justify-content: center; cursor: pointer;"
-                class="zoom">
-                <p style="text-align: center;font: normal normal bold 18px/18px Poppins;color: #FFFFFF;">
-                    ORGANIZATIVA</p>
-            </div>
-            <div id="botao_3"
-                style="width: 672px; height: 41px; background: 0% 0% no-repeat padding-box padding-box rgb(100, 151, 129); display: flex; align-items: center; justify-content: center; cursor: pointer;"
-                class="zoom">
-                <p style="text-align: center;font: normal normal bold 18px/18px Poppins;color: #FFFFFF;">
-                    TECNOASSISTENCIAL OU OPERATIVA</p>
-            </div>
-        </div>
-        <div>
-            <div id="janela_1" class="jan" style="cursor: pointer; display: none;">
-                <div
-                    style="width: 625px;height: 202px;background: #376551 0% 0% no-repeat padding-box;margin-top: 150px;margin-left: 140px;display: flex;flex-direction: column;align-items: center;">
-                    <p style="font: normal normal bold 24px/18px Poppins;letter-spacing: 0px;color: #FFAA00;">
-                        GERENCIAL:</p>
-                    <p style="font: normal normal normal 18px/32px Poppins;width: 555px;color: #FFAA00;">
-                        Relativa aos mecanismos de condução do processo de reorganização das ações e dos serviços.
-                    </p>
-                </div>
-                <p style="position: absolute;top: 150px;left: 740px;color: #FFAA00;">X</p>
-            </div>
-            <div id="janela_2" class="jan" style="cursor: pointer; display: none;">
-                <div
-                    style="width: 685px;height: 226px;background: #376551 0% 0% no-repeat padding-box;margin-top: 150px;margin-left: 110px;display: flex;flex-direction: column;align-items: center;">
-                    <p style="font: normal normal bold 24px/18px Poppins;letter-spacing: 0px;color: #FFAA00;">
-                        ORGANIZATIVA:</p>
-                    <p
-                        style="font: normal normal normal 18px/32px Poppins;letter-spacing: 0px;color: #FFAA00;width: 555px;">
-                        Estabelecimento de relações entre as unidades de prestação de serviços, levando em conta a
-                        hierarquização dos níveis de
-                        complexidade tecnológica do processo de produção das ações de saúde.
-                    </p>
-                </div>
-                <p style="position: absolute;top: 150px;left: 770px;color: #FFAA00;">X</p>
-            </div>
-            <div id="janela_3" class="jan" style="cursor: pointer; display: none;">
-                <div
-                    style="width: 685px;height: 226px;background: #376551 0% 0% no-repeat padding-box;margin-top: 150px;margin-left: 110px;display: flex;flex-direction: column;align-items: center;">
-                    <p style="font: normal normal bold 24px/18px Poppins;letter-spacing: 0px;color: #FFAA00;">
-                        TECNOASSISTENCIAL OU OPERATIVA:</p>
-                    <p
-                        style="width: 625px;height: 155px;text-align: left;font: normal normal normal 18px/32px Poppins;letter-spacing: 0px;color: #FFAA00;margin-top: -2px;">
-                        Relações estabelecidas entre os sujeitos das práticas e seus objetos de trabalho, mediadas
-                        pelo
-                        saber e pela tecnologia
-                        que operam no processo de trabalho em saúde, em vários planos, quais sejam os da promoção da
-                        saúde, da prevenção de
-                        riscos e agravos, da recuperação e reabilitação.
-                    </p>
-                </div>
-                <p style="position: absolute;top: 150px;left: 770px;color: #FFAA00;">X</p>
-            </div>
-        </div>
+    <div style="margin-left: 50px;margin-top: 152px;width: 790px;">
+        <p>São necessárias a implantação de práticas intersetoriais de promoção da saúde, a implementação de
+            práticas territoriais
+            de vigilância epidemiológica, sanitária e ambiental e a redefinição das práticas assistenciais e
+            reabilitadoras, de modo
+            a se adequar o perfil de oferta das ações e dos serviços de saúde ao perfil de necessidades, demandas e
+            problemas de
+            saúde da população (TEIXEIRA; VILASBÔAS, 2014). </p>
     </div>
 </div>
 <footer style="width: 1008px;height: 19px;display: flex;background-color: #1F6D4C;">
@@ -88,28 +26,3 @@
             NA MODELAGEM DE REDES DE ATENÇÃO À SAÚDE</p>
     </div>
 </footer>
-<script>
-    $(() => {
-        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
-        apagarJanelas();
-        $(document).find('[id^=btn]').hide();
-        let botoes = $(document).find('[id^=botao]').addClass('zoom').map((index, botao) => {
-            $(botao).css('cursor', 'pointer');
-            $(botao).hover(() => {
-                $(document).find(`[id=botao_${index + 1}]`).css('background-color', '#FFA800');
-            });
-            $(botao).mouseleave(() => {
-                $(document).find(`[id=botao_${index + 1}]`).css('background-color', '#649781');
-            });
-            $(botao).click(() => {
-                apagarJanelas();
-                $(janelas[index]).fadeIn();
-            })
-        })
-        function apagarJanelas() {
-            janelas.map((index, janela) => {
-                $(janela).hide();
-            })
-        }
-    })
-</script>
